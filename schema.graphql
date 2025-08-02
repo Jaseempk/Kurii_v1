@@ -1,0 +1,206 @@
+type KuriCoreFactory_CurrencyRemoved {
+  id: ID!
+  caller: String!
+  currencyRemoved: String!
+}
+
+type KuriCoreFactory_KeyHashUpdated {
+  id: ID!
+  newKeyHash: String!
+  oldKeyHash: String!
+}
+
+type KuriCoreFactory_KuriMarketDeployed {
+  id: ID!
+  caller: String!
+  marketAddress: String!
+  intervalType: BigInt!
+  timestamp: BigInt!
+  wannabeMember: Boolean!
+  circleCurrencyAddress: String!
+}
+
+type KuriCoreFactory_NewCircleCurrencyAdded {
+  id: ID!
+  caller: String!
+  newCurrencyAddress: String!
+}
+
+type KuriCore_BeefyVaultDeposit {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  intervalIndex: BigInt!
+  vaultAddress: String!
+  shareAmount: BigInt!
+  kuriAmount: BigInt!
+  timestamp: BigInt!
+}
+
+type KuriCore_BeefyVaultWithdraw {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  vaultAddress: String!
+  shareAmount: BigInt!
+  withdrawAmount: BigInt!
+  timestamp: BigInt!
+}
+
+type KuriCore_CoordinatorSet {
+  id: ID!
+  vrfCoordinator: String!
+}
+
+type KuriCore_KuriInitFailed {
+  id: ID!
+  contractAddress: String!
+  creator: String!
+  kuriAmount: BigInt!
+  totalParticipantsCount: BigInt!
+  state: BigInt!
+}
+
+type KuriCore_KuriInitialised {
+  id: ID!
+  contractAddress: String!
+  _kuriData_0: String!
+  _kuriData_1: BigInt!
+  _kuriData_2: BigInt!
+  _kuriData_3: BigInt!
+  _kuriData_4: BigInt!
+  _kuriData_5: BigInt!
+  _kuriData_6: BigInt!
+  _kuriData_7: BigInt!
+  _kuriData_8: BigInt!
+  _kuriData_9: BigInt!
+  _kuriData_10: BigInt!
+  _kuriData_11: BigInt!
+}
+
+type KuriCore_KuriSlotClaimed {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  timestamp: BigInt!
+  kuriAmount: BigInt!
+  intervalIndex: BigInt!
+}
+
+type KuriCore_MarketVRFSubscriptionDone {
+  id: ID!
+  contractAddress: String!
+  subscriptionId: BigInt!
+  subscriber: String!
+}
+
+type KuriCore_MembershipRequested {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  timestamp: BigInt!
+}
+
+type KuriCore_OwnershipTransferRequested {
+  id: ID!
+  contractAddress: String!
+  from: String!
+  to: String!
+}
+
+type KuriCore_OwnershipTransferred {
+  id: ID!
+  contractAddress: String!
+  from: String!
+  to: String!
+}
+
+type KuriCore_RaffleWinnerSelected {
+  id: ID!
+  contractAddress: String!
+  intervalIndex: BigInt!
+  winnerIndex: BigInt!
+  winnerAddress: String!
+  winnerTimestamp: BigInt!
+  requestId: BigInt!
+}
+
+type KuriCore_RoleAdminChanged {
+  id: ID!
+  role: String!
+  previousAdminRole: String!
+  newAdminRole: String!
+}
+
+type KuriCore_RoleGranted {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type KuriCore_RoleRevoked {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type KuriCore_UserAccepted {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  caller: String!
+  _totalActiveParticipantsCount: BigInt!
+}
+
+type KuriCore_UserDeposited {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  userIndex: BigInt!
+  intervalIndex: BigInt!
+  amountDeposited: BigInt!
+  depositTimestamp: BigInt!
+}
+
+type KuriCore_UserFlagged {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  intervalIndex: BigInt!
+}
+
+type KuriCore_UserRejected {
+  id: ID!
+  contractAddress: String!
+  user: String!
+  caller: String!
+}
+
+type KuriCoreFactory_RoleAdminChanged {
+  id: ID!
+  role: String!
+  previousAdminRole: String!
+  newAdminRole: String!
+}
+
+type KuriCoreFactory_RoleGranted {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type KuriCoreFactory_RoleRevoked {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type KuriCoreFactory_VRFCoordinatorUpdated {
+  id: ID!
+  newCoordinator: String!
+  oldCoordinator: String!
+}
