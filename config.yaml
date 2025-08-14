@@ -6,7 +6,7 @@ networks:
     contracts:
       - name: KuriCoreFactory
         address:
-          - 0x62679d727a0004e8143026A4a32F51CC8efD468c
+          - 0x3CB5aD6332255E86cc1FB55b9AC7DA248d039d20
         handler: src/EventHandlers.ts
         events:
           - event: CurrencyRemoved(address caller, address currencyRemoved)
