@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
 name: kuri__v1
 networks:
-  - id: 84532
-    start_block: 0
+  - id: 8453
+    start_block: 35024935
     contracts:
       - name: KuriCoreFactory
         address:
-          - 0x62679d727a0004e8143026A4a32F51CC8efD468c
+          - 0x408A1C9f08bBA1A8FbFcEE5Bb06171D60660c78C
         handler: src/EventHandlers.ts
         events:
           - event: CurrencyRemoved(address caller, address currencyRemoved)
