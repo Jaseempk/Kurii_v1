@@ -1837,6 +1837,11 @@
   },
   {
     "type": "error",
+    "name": "KuriCore__WinnerAlreadySelected",
+    "inputs": []
+  },
+  {
+    "type": "error",
     "name": "OnlyCoordinatorCanFulfill",
     "inputs": [
       {

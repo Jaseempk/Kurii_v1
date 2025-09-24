@@ -2,11 +2,11 @@
 name: kuri__v1
 networks:
   - id: 8453
-    start_block: 35219463
+    start_block: 35957222
     contracts:
       - name: KuriCoreFactory
         address:
-          - 0x4cd6cb26cf8599b3ea0c249ba5dd5ece46e01d9c
+          - 0xC388C761dE077bC6f5c3Fee21a609669277A1401
         handler: src/EventHandlers.ts
         events:
           - event: CurrencyRemoved(address caller, address currencyRemoved)
