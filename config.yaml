@@ -2,11 +2,11 @@
 name: kuri__v1
 networks:
   - id: 8453
-    start_block: 35957222
+    start_block: 36029820
     contracts:
       - name: KuriCoreFactory
         address:
-          - 0xC388C761dE077bC6f5c3Fee21a609669277A1401
+          - 0x6557808973E155D931a3948d3Cc2315f90Cb2aF3
         handler: src/EventHandlers.ts
         events:
           - event: CurrencyRemoved(address caller, address currencyRemoved)
@@ -25,7 +25,6 @@ networks:
           - event: BeefyVaultDeposit(address indexed user, uint16 indexed intervalIndex, address indexed vaultAddress, uint256 shareAmount, uint256 kuriAmount, uint256 timestamp)
           - event: BeefyVaultWithdraw(address indexed user, address indexed vaultAddress, uint256 shareAmount, uint256 withdrawAmount, uint256 timestamp)
           - event: CoordinatorSet(address vrfCoordinator)
-          - event: KuriInitFailed(address creator, uint64 kuriAmount, uint16 totalParticipantsCount, uint8 state)
           - event: KuriInitialised((address,uint64,uint16,uint16,uint24,uint48,uint48,uint48,uint48,uint48,uint8,uint8) _kuriData)
           - event: KuriSlotClaimed(address user, uint64 timestamp, uint64 kuriAmount, uint16 intervalIndex)
           - event: MarketVRFSubscriptionDone(uint256 subscriptionId, address subscriber)

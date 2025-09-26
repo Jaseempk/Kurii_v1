@@ -15,7 +15,6 @@ import {
   KuriCore_BeefyVaultDeposit,
   KuriCore_BeefyVaultWithdraw,
   KuriCore_CoordinatorSet,
-  KuriCore_KuriInitFailed,
   KuriCore_KuriInitialised,
   KuriCore_KuriSlotClaimed,
   KuriCore_MarketVRFSubscriptionDone,
@@ -159,19 +158,6 @@ KuriCore.CoordinatorSet.handler(async ({ event, context }) => {
   };
 
   context.KuriCore_CoordinatorSet.set(entity);
-});
-
-KuriCore.KuriInitFailed.handler(async ({ event, context }) => {
-  const entity: KuriCore_KuriInitFailed = {
-    id: `${event.chainId}_${event.block.number}_${event.logIndex}`,
-    contractAddress: event.srcAddress,
-    creator: event.params.creator,
-    kuriAmount: event.params.kuriAmount,
-    totalParticipantsCount: event.params.totalParticipantsCount,
-    state: event.params.state,
-  };
-
-  context.KuriCore_KuriInitFailed.set(entity);
 });
 
 KuriCore.KuriInitialised.handler(async ({ event, context }) => {

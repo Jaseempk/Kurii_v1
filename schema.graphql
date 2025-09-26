@@ -52,15 +52,6 @@ type KuriCore_CoordinatorSet {
   vrfCoordinator: String!
 }
 
-type KuriCore_KuriInitFailed {
-  id: ID!
-  contractAddress: String!
-  creator: String!
-  kuriAmount: BigInt!
-  totalParticipantsCount: BigInt!
-  state: BigInt!
-}
-
 type KuriCore_KuriInitialised {
   id: ID!
   contractAddress: String!
